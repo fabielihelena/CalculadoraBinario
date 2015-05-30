@@ -35,21 +35,22 @@
             this.subtrair = new System.Windows.Forms.Button();
             this.multiplicar = new System.Windows.Forms.Button();
             this.dividir = new System.Windows.Forms.Button();
-            this.C = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.CE = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Decimal = new System.Windows.Forms.Button();
+            this.result_convert = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // result
             // 
             this.result.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.result.Location = new System.Drawing.Point(9, 12);
+            this.result.Location = new System.Drawing.Point(7, 24);
             this.result.Multiline = true;
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(224, 27);
+            this.result.Size = new System.Drawing.Size(265, 27);
             this.result.TabIndex = 0;
             this.result.Text = "0";
             this.result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -58,9 +59,9 @@
             // button0
             // 
             this.button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button0.Location = new System.Drawing.Point(8, 45);
+            this.button0.Location = new System.Drawing.Point(8, 56);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(40, 40);
+            this.button0.Size = new System.Drawing.Size(69, 62);
             this.button0.TabIndex = 1;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
@@ -69,9 +70,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(8, 86);
+            this.button1.Location = new System.Drawing.Point(8, 124);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.Size = new System.Drawing.Size(69, 61);
             this.button1.TabIndex = 2;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,7 +81,7 @@
             // somar
             // 
             this.somar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.somar.Location = new System.Drawing.Point(54, 45);
+            this.somar.Location = new System.Drawing.Point(83, 55);
             this.somar.Name = "somar";
             this.somar.Size = new System.Drawing.Size(40, 40);
             this.somar.TabIndex = 3;
@@ -91,7 +92,7 @@
             // subtrair
             // 
             this.subtrair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtrair.Location = new System.Drawing.Point(54, 86);
+            this.subtrair.Location = new System.Drawing.Point(133, 55);
             this.subtrair.Name = "subtrair";
             this.subtrair.Size = new System.Drawing.Size(40, 40);
             this.subtrair.TabIndex = 4;
@@ -102,7 +103,7 @@
             // multiplicar
             // 
             this.multiplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiplicar.Location = new System.Drawing.Point(100, 45);
+            this.multiplicar.Location = new System.Drawing.Point(232, 57);
             this.multiplicar.Name = "multiplicar";
             this.multiplicar.Size = new System.Drawing.Size(40, 40);
             this.multiplicar.TabIndex = 5;
@@ -113,7 +114,7 @@
             // dividir
             // 
             this.dividir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dividir.Location = new System.Drawing.Point(100, 86);
+            this.dividir.Location = new System.Drawing.Point(183, 55);
             this.dividir.Name = "dividir";
             this.dividir.Size = new System.Drawing.Size(40, 40);
             this.dividir.TabIndex = 6;
@@ -121,23 +122,12 @@
             this.dividir.UseVisualStyleBackColor = true;
             this.dividir.Click += new System.EventHandler(this.operacao_Click);
             // 
-            // C
-            // 
-            this.C.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C.Location = new System.Drawing.Point(146, 45);
-            this.C.Name = "C";
-            this.C.Size = new System.Drawing.Size(40, 40);
-            this.C.TabIndex = 7;
-            this.C.Text = "C";
-            this.C.UseVisualStyleBackColor = true;
-            this.C.Click += new System.EventHandler(this.C_Click);
-            // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(146, 86);
+            this.button7.Location = new System.Drawing.Point(80, 104);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 40);
+            this.button7.Size = new System.Drawing.Size(47, 81);
             this.button7.TabIndex = 8;
             this.button7.Text = "=";
             this.button7.UseVisualStyleBackColor = true;
@@ -146,44 +136,68 @@
             // CE
             // 
             this.CE.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CE.Location = new System.Drawing.Point(192, 45);
+            this.CE.Location = new System.Drawing.Point(133, 104);
             this.CE.Name = "CE";
-            this.CE.Size = new System.Drawing.Size(40, 40);
+            this.CE.Size = new System.Drawing.Size(67, 39);
             this.CE.TabIndex = 9;
             this.CE.Text = "CE";
             this.CE.UseVisualStyleBackColor = true;
             this.CE.Click += new System.EventHandler(this.CE_Click);
             // 
-            // button3
+            // result_convert
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(120, 128);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 40);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Hexadecimal";
-            this.button3.UseVisualStyleBackColor = true;
+            this.result_convert.Location = new System.Drawing.Point(133, 149);
+            this.result_convert.Multiline = true;
+            this.result_convert.Name = "result_convert";
+            this.result_convert.Size = new System.Drawing.Size(139, 36);
+            this.result_convert.TabIndex = 17;
             // 
-            // Decimal
+            // button2
             // 
-            this.Decimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Decimal.Location = new System.Drawing.Point(8, 128);
-            this.Decimal.Name = "Decimal";
-            this.Decimal.Size = new System.Drawing.Size(111, 40);
-            this.Decimal.TabIndex = 12;
-            this.Decimal.Text = "Decimal";
-            this.Decimal.UseVisualStyleBackColor = true;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(205, 103);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 39);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "C";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.C_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(278, 149);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(63, 17);
+            this.radioButton1.TabIndex = 23;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Decimal";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Click += new System.EventHandler(this.Convert);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(278, 168);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(86, 17);
+            this.radioButton2.TabIndex = 24;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Hexadecimal";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Click += new System.EventHandler(this.Convert);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(242, 178);
-            this.Controls.Add(this.Decimal);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(372, 210);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.result_convert);
             this.Controls.Add(this.CE);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.C);
             this.Controls.Add(this.dividir);
             this.Controls.Add(this.multiplicar);
             this.Controls.Add(this.subtrair);
@@ -210,11 +224,12 @@
         private System.Windows.Forms.Button subtrair;
         private System.Windows.Forms.Button multiplicar;
         private System.Windows.Forms.Button dividir;
-        private System.Windows.Forms.Button C;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button CE;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button Decimal;
+        private System.Windows.Forms.TextBox result_convert;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
 

@@ -75,14 +75,14 @@ namespace WindowsFormsApplication1
             switch (operacao)
             {
                 case "+":
-                result.Text = Logica.soma1((value2).ToString(),(value).ToString());
-                Console.WriteLine(result.Text);
+                    result.Text = Logica.soma1((value2).ToString(),(value).ToString());
                     break;
 
-                /*case "-"
+                case "-":
+                    result.Text = Logica.binaryMenos((value2).ToString(),(value).ToString());
                     break;
 
-                case "*"
+                /*case "*"
                     break;
 
                 case"/"
@@ -94,15 +94,31 @@ namespace WindowsFormsApplication1
        private void CE_Click(object sender, EventArgs e)
        {
            result.Text = "0";
+           result_convert.Text = "";
            value = 0;
        }
        private void C_Click(object sender, EventArgs e)
        {
            result.Clear();
+           result_convert.Clear();
            value = 0;
            result.Text = "0";
            operacao = "";
        }
+        private void Convert(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true) 
+            {
+                result_convert.Text = Logica.BinDec(result.Text);
+            }
+
+            if (radioButton2.Checked == true)
+            {
+                result_convert.Text = Logica.BinHexa(result.Text);
+            }
+        }
+
+
 
       
 

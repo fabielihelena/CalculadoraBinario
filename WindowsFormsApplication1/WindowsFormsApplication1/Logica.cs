@@ -31,64 +31,41 @@ namespace WindowsFormsApplication1
             string[] r = new string[] { ele1, ele2 };
             return r;
         }
-        public static string binaryMenos(string ele1, string ele2)
+        public static string binaryMenos(string b1, string b2)
         {
             //1- Normaliza
-            string loan = "";
-            string soma = "1";
-            int somaCount = soma.Length;
-
-            string troca0_b = (normalizeString(ele1, ele2))[1].Replace('0', 'b');
-            string troca1_c = troca0_b.Replace('1', 'c');
-            string trocab_1 = troca1_c.Replace('b', '1');
-            string trocafinal = trocab_1.Replace('c', '0');
-            int norma = trocafinal.Length;
-
+            //string loan = "";
+            //string soma = "1";
+            string s1 = (normalizeString(b1, b2))[0];
+            string s2 = (normalizeString(b1, b2))[1];
             string result = "";
 
-            if (trocafinal.Length > soma.Length)
+            s2 = s2.Replace('1', 'a');
+            s2 = s2.Replace('0', '1');
+            s2 = s2.Replace('a', '0');
+
+            s2 = soma1(s2, "1");
+
+            result = soma1(s1, s2);
+            return result;
+            //result = result.Remove(0, 1);
+
+            /*if (result == "")
             {
-                for (int i = 0; i < (norma - somaCount); i++)
-                {
-                    soma = "0" + soma;
-                }
-            }
-            for (int i = trocafinal.Length - 1; i >= 0; i--)
-            {
-                if (i == trocafinal.Length - 1)
-                {
-                    if (trocafinal[i].Equals('0') && soma[i].Equals('1')) result = '1' + result;
-                    if (trocafinal[i].Equals('1') && soma[i].Equals('1'))
-                    {
-                        loan = "1";
-                        result = "0" + result;
-                    }
-                }
-
-                if (string.IsNullOrWhiteSpace(loan))
-                {
-                    if (trocafinal[i].Equals('0') && soma[i].Equals('0')) result = '0' + result;
-                    if (trocafinal[i].Equals('1') && soma[i].Equals('0')) result = '1' + result;
-                }
-
-                else if (trocafinal[i].Equals('1') && soma[i].Equals('0'))
-                {
-                    loan = "1";
-                    result = "0" + result;
-                }
-
-                else if (trocafinal[i].Equals('0') && soma[i].Equals('0'))
-                {
-                    loan = "";
-                    result = "1" + result;
-                }
+                return "0";
             }
 
-            string num3 = loan + result;
-            soma1("11110", num3);
-            return loan + result;
-        }
+            char[] b = result.ToCharArray();
 
+            if (b[0] == '0')
+            {
+                return result.Remove(0, 1);
+            }
+            else
+            {
+                return result;
+            }*/
+        }   
         public static string soma1(string ele1, string ele2)
         {
             char[] h = (normalizeString(ele1, ele2))[0].ToCharArray();
@@ -129,7 +106,7 @@ namespace WindowsFormsApplication1
             string num4 = overflow + resultado;
             string numfinal = num4.Substring(1, num4.Length - 1);
 
-            Console.WriteLine(numfinal);
+            //Console.WriteLine(numfinal);
             return overflow + resultado;
 
         }
@@ -147,7 +124,7 @@ namespace WindowsFormsApplication1
             return new string(caract);
         }
 
-        public static void BinDec(string bin)
+        public static string BinDec(string bin)
         {
             int expoente = 0;
             int num;
@@ -160,33 +137,57 @@ namespace WindowsFormsApplication1
                 soma += num * (int)(Math.Pow(2, expoente));
                 expoente++;
             }
+            return soma+"";
         }
-        /*public static string DecHexa(int b)
-        {
-            string num = "";
-            int dividendo = Convert.ToInt32(b);
-            int q;
-            string bin = "";
-            int r;
+        public static string letrasHexa(int d){
 
-            if (b == 0)
+            switch (d)
+            {
+                case 10:
+                    return "A";
+                    break;
+                case 11:
+                    return "B";
+                    break;
+                case 12:
+                    return "C";
+                    break;
+                case 13:
+                    return "D";
+                    break;
+                case 14:
+                    return "E";
+                    break;
+                case 15:
+                    return "F";
+                    break;
+                default:
+                    return d+"";
+                    break;
+            }
+        }
+
+        public static string BinHexa(string b) 
+        {
+            string d = BinDec(b);
+            return DecHexa(int.Parse(d));
+        }
+        public static string DecHexa(int d)
+        {
+            int resto = d % 16;
+            int result = (d - resto) / 16;
+
+            if (d == 0)
             {
                 return "";
             }
-            while (dividendo >= 1)
+            else
             {
-                q = dividendo / 16;
-                r = dividendo % 16;
-                num += (dividendo % 16).ToString();
-                dividendo = q;
+                return DecHexa(result) + letrasHexa(resto);
             }
-            for (int i = num.Length - 1; i >= 0; i--)
-            {
-                bin = bin + num[i];
-            }
-            return InverterString(bin);
-        }*/
-       public static string DecBin(int n)
+            
+        }
+            public static string DecBin(int n)
         {
             string num = "";
             int dividendo = Convert.ToInt32(n);
@@ -202,7 +203,6 @@ namespace WindowsFormsApplication1
                     num += (dividendo % 2).ToString();
                     dividendo = q;
             }   
-                Console.WriteLine(InverterString(num));
                 return InverterString(num);
                 
        }
