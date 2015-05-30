@@ -44,29 +44,13 @@ namespace WindowsFormsApplication1
             s2 = s2.Replace('0', '1');
             s2 = s2.Replace('a', '0');
 
-            s2 = soma1(s2, "1");
+            s2 = Soma(s2, "1");
 
-            result = soma1(s1, s2);
+            result = Soma(s1, s2);
+            result = result.Remove(0, 1);
             return result;
-            //result = result.Remove(0, 1);
-
-            /*if (result == "")
-            {
-                return "0";
-            }
-
-            char[] b = result.ToCharArray();
-
-            if (b[0] == '0')
-            {
-                return result.Remove(0, 1);
-            }
-            else
-            {
-                return result;
-            }*/
         }   
-        public static string soma1(string ele1, string ele2)
+        public static string Soma(string ele1, string ele2)
         {
             char[] h = (normalizeString(ele1, ele2))[0].ToCharArray();
             char[] s = (normalizeString(ele1, ele2))[1].ToCharArray();

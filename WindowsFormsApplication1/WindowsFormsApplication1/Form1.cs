@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
             switch (operacao)
             {
                 case "+":
-                    result.Text = Logica.soma1((value2).ToString(),(value).ToString());
+                    result.Text = Logica.Soma((value2).ToString(),(value).ToString());
                     break;
 
                 case "-":
