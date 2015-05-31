@@ -67,3 +67,12 @@ C:\Users\fabieli\Downloads\CalculadoraBinario(2905)\CalculadoraBinario(2705)\Cal
 C:\Users\fabieli\Downloads\CalculadoraBinario(2905)\CalculadoraBinario(2705)\CalculadoraBinario-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\fabieli\Downloads\CalculadoraBinario(2905)\CalculadoraBinario(2705)\CalculadoraBinario-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\fabieli\Downloads\CalculadoraBinario(2905)\CalculadoraBinario(2705)\CalculadoraBinario-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\fabieli\Downloads\CalculadoraBinario\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

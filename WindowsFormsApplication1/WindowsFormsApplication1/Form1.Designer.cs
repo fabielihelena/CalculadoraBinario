@@ -146,11 +146,15 @@
             // 
             // result_convert
             // 
+            this.result_convert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.result_convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.result_convert.Location = new System.Drawing.Point(133, 149);
             this.result_convert.Multiline = true;
             this.result_convert.Name = "result_convert";
             this.result_convert.Size = new System.Drawing.Size(139, 36);
             this.result_convert.TabIndex = 17;
+            this.result_convert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button2
             // 

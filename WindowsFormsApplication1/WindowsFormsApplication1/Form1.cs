@@ -69,7 +69,6 @@ namespace WindowsFormsApplication1
         }
         private void Operacoes()
         {
-
             value = double.Parse(result.Text);
 
             switch (operacao)
@@ -79,14 +78,16 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "-":
-                    result.Text = Logica.binaryMenos((value2).ToString(),(value).ToString());
+                    result.Text = Logica.Subtracao((value2).ToString(),(value).ToString());
                     break;
 
-                /*case "*"
+                case "*":
+                    result.Text = Logica.Multiplicacao((value2).ToString(),(value).ToString());
                     break;
 
-                case"/"
-                    break;*/
+                case "/":
+                    result.Text = Logica.Divisao((value2).ToString(), (value).ToString());
+                    break;
             }
         }
 
@@ -117,11 +118,6 @@ namespace WindowsFormsApplication1
                 result_convert.Text = Logica.BinHexa(result.Text);
             }
         }
-
-
-
-      
-
     }         
 }
 

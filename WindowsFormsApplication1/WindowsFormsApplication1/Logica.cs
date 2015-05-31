@@ -1,41 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
     class Logica
     {
-        public static string[] normalizeString(string ele1, string ele2)
+        public static string[] normalizeString(string s1, string s2)
         {
-            int num1 = ele1.Length;
-            int num2 = ele2.Length;
+            int num1 = s1.Length;
+            int num2 = s2.Length;
 
-            if (ele1.Length > ele2.Length)
+            if (s1.Length > s2.Length)
             {
                 for (int i = 0; i < (num1 - num2); i++)
                 {
-                    ele2 = "0" + ele2;
+                    s2 = "0" + s2;
                 }
             }
-            else if (ele1.Length < ele2.Length)
+            else if (s1.Length < s2.Length)
             {
                 for (int i = 0; i < (num2 - num1); i++)
                 {
-                    ele1 = "0" + ele1;
+                    s1 = "0" + s1;
                 }
             }
-
-            string[] r = new string[] { ele1, ele2 };
+            string[] r = new string[] { s1, s2 };
             return r;
         }
-        public static string binaryMenos(string b1, string b2)
+        public static string Subtracao(string b1, string b2)
         {
-            //1- Normaliza
-            //string loan = "";
-            //string soma = "1";
             string s1 = (normalizeString(b1, b2))[0];
             string s2 = (normalizeString(b1, b2))[1];
             string result = "";
@@ -89,12 +89,18 @@ namespace WindowsFormsApplication1
             }
             string num4 = overflow + resultado;
             string numfinal = num4.Substring(1, num4.Length - 1);
-
-            //Console.WriteLine(numfinal);
             return overflow + resultado;
-
         }
-
+        public static string Multiplicacao(string s1, string s2)
+        {
+			string resultado = "0";
+            string n = BinDec(s2);
+            for (int i = 0; i < int.Parse(n); i++)
+			{
+				resultado = Soma(resultado,s1);
+			}
+			return resultado;
+		}
         public static string InverterString(string s){
 
             int tamanho = s.Length;
@@ -183,12 +189,42 @@ namespace WindowsFormsApplication1
             }
             while(dividendo >= 1)
             {
-                    q = dividendo / 2;
-                    num += (dividendo % 2).ToString();
-                    dividendo = q;
+                q = dividendo / 2;
+                num += (dividendo % 2).ToString();
+                dividendo = q;
             }   
                 return InverterString(num);
                 
        }
+            public static string Divisao(string s1, string s2)
+            {
+                string resultado = "0";
+
+                if (int.Parse(s1) >= int.Parse(s2))
+                {
+                    for (int i = 1; i < int.MaxValue; i++)
+                    {
+                        string d = Multiplicacao(DecBin(i), s2.ToString());
+
+                        if (int.Parse(d) > int.Parse(s1))
+                        {
+                            resultado = DecBin(i - 1);
+                            return resultado;
+                        }
+
+                        if (int.Parse(d) == int.Parse(s1))
+                        {
+                            resultado = DecBin(i);
+                            return resultado;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Não é possível realizar essa conta pois o segundo número é maior que o primeiro");
+                    return "";
+                }
+                return resultado;
+            }
     }
 }
